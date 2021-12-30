@@ -12,7 +12,7 @@ class ViewController: UIViewController, WKNavigationDelegate  {
     
     var webView: WKWebView!
     var progressView: UIProgressView!
-    var websites = ["apple.com", "hackingwithswift.com"]
+    var websites = ["apple.com", "hackingwithswift.com", "google.com"]
 
     override func loadView() {
         webView = WKWebView()
@@ -86,6 +86,17 @@ class ViewController: UIViewController, WKNavigationDelegate  {
             }
         }
         
+
+        if url?.description != "about:blank" {
+            let ac = UIAlertController(title: url?.description, message:"This is URL is blocked.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            present(ac, animated: true)
+        }
+        
+        
+        
         decisionHandler(.cancel)
+
+        
     }
 }
