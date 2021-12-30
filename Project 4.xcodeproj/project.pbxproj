@@ -13,6 +13,7 @@
 		F61D858C2777BB4900844920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61D858A2777BB4900844920 /* Main.storyboard */; };
 		F61D858E2777BB4B00844920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F61D858D2777BB4B00844920 /* Assets.xcassets */; };
 		F61D85912777BB4B00844920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61D858F2777BB4B00844920 /* LaunchScreen.storyboard */; };
+		F623B95A277E46A900F40A14 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623B959277E46A900F40A14 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F61D858D2777BB4B00844920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F61D85902777BB4B00844920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F61D85922777BB4B00844920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F623B959277E46A900F40A14 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				F61D85842777BB4900844920 /* AppDelegate.swift */,
 				F61D85862777BB4900844920 /* SceneDelegate.swift */,
+				F623B959277E46A900F40A14 /* TableViewController.swift */,
 				F61D85882777BB4900844920 /* ViewController.swift */,
 				F61D858A2777BB4900844920 /* Main.storyboard */,
 				F61D858D2777BB4B00844920 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				F61D85892777BB4900844920 /* ViewController.swift in Sources */,
 				F61D85852777BB4900844920 /* AppDelegate.swift in Sources */,
 				F61D85872777BB4900844920 /* SceneDelegate.swift in Sources */,
+				F623B95A277E46A900F40A14 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

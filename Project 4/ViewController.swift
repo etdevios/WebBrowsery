@@ -12,6 +12,7 @@ class ViewController: UIViewController, WKNavigationDelegate  {
     
     var webView: WKWebView!
     var progressView: UIProgressView!
+    var tableWebSite: String?
     var websites = ["apple.com", "hackingwithswift.com", "google.com"]
 
     override func loadView() {
@@ -39,16 +40,18 @@ class ViewController: UIViewController, WKNavigationDelegate  {
         
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         
+        if let website = tableWebSite{
+            let url = URL(string: "https://" + website)!
+            webView.load(URLRequest(url: url))
+            webView.allowsBackForwardNavigationGestures = true
+        }
         
-        let url = URL(string: "https://" + websites[0])!
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
+        
     }
 
     @objc func openTapped() {
         let ac = UIAlertController(title: "Open page…", message: "Oh", preferredStyle: .actionSheet)
-//        ac.addAction(UIAlertAction(title: "apple.com", style: .default, handler: openPage))
-//        ac.addAction(UIAlertAction(title: "hackingwithswift.com", style: .default, handler: openPage))
+
         for website in websites {
             ac.addAction(UIAlertAction(title: website, style: .default, handler: openPage))
         }
@@ -90,11 +93,8 @@ class ViewController: UIViewController, WKNavigationDelegate  {
             ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
             present(ac, animated: true)
         }
-        
-        
-        
+
         decisionHandler(.cancel)
 
-        
     }
 }
